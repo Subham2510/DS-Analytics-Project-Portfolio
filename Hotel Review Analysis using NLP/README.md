@@ -1,7 +1,7 @@
 # Hotel Reviews Analysis Project 🏨📊
 
 ## Motive
-This project aims to conduct a comprehensive analysis of hotel reviews, extracting valuable insights to enhance customer experiences. 🌟 By employing various natural language processing (NLP) techniques, sentiment analysis, emotion analysis, and visualization tools, we seek to understand customer sentiments, identify areas for improvement, and uncover specific aspects contributing to positive experiences.
+This project aims to comprehensively analyze hotel reviews, extracting valuable insights to enhance customer experiences. 🌟 By employing various natural language processing (NLP) techniques, sentiment analysis, emotion analysis, and visualization tools, we seek to understand customer sentiments, identify areas for improvement, and uncover specific aspects contributing to positive experiences.
 
 ## Data Origin
 The dataset used in this analysis is sourced from diverse hotel reviews, encompassing feedback on various aspects such as amenities, ambiance, and overall guest satisfaction. 🌐 The data provides a rich source of information to evaluate and improve the hotel's offerings.
