@@ -22,10 +22,11 @@ A Capitalization Weighted Index assigns weights to each component based on its m
 Alternative index weighting methodologies include equal-weighted, price-weighted, and fundamental-weighted indices. While each approach has its merits, a Capitalization-Weighted Index is widely used due to its simplicity and alignment with market dynamics.
 
 ## Conclusion
-Our Index FNX % return performance compared with Top 3 Oil & Gas ETFs of USA i.e.
+![%Return Trend compared with USA's Top 3 Oil   Gas ETFs](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/e7e9c2b7-d63c-45f6-b518-18101cacf362)
+
+Our Index FNX % return performance compared with the Top 3 Oil & Gas ETFs of the USA i.e.:
 1. SPDR S&P Oil & Gas Exploration & Production ETF
 2. iShares U.S. Oil & Gas Exploration & Production ETF
 3. Invesco Energy Exploration & Production ETF
-![%Return Trend compared with USA's Top 3 Oil   Gas ETFs](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/e7e9c2b7-d63c-45f6-b518-18101cacf362)
 
 The Custom Capitalization-Weighted Index for the Oil & Gas sector offers investors a tailored benchmark for tracking the performance of the top companies in this industry. This index is a valuable tool for portfolio management, investment analysis, and benchmarking against existing ETFs by accurately reflecting market capitalization and sector dynamics. Its performance comparability to leading Oil & Gas ETFs underscores its relevance and utility in guiding investment decisions in this vital sector.
