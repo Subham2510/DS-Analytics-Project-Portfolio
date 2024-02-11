@@ -11,7 +11,7 @@ Data for constructing the index was sourced from finance.yahoo.com and companies
 
 ## Requirements
 - Access to finance.yahoo.com and companiesmarketcap.com for data collection
-- Google Sheets for organizing and analyzing the collected data [View Google Sheet]([link_to_google_sheet](https://docs.google.com/spreadsheets/d/1eBIVOjuR5DE0ET9Uq1hY8y3MTrIl4-jCEhmjCAlGqUE/edit?usp=sharing))
+- Google Sheets for organizing and analyzing the collected data ([link_to_google_sheet](https://docs.google.com/spreadsheets/d/1eBIVOjuR5DE0ET9Uq1hY8y3MTrIl4-jCEhmjCAlGqUE/edit?usp=sharing))
 - Basic knowledge of financial metrics and index construction principles
 
 ## Concepts Used
