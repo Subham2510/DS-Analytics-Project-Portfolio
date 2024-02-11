@@ -22,5 +22,5 @@ A Capitalization Weighted Index assigns weights to each component based on its m
 Alternative index weighting methodologies include equal-weighted, price-weighted, and fundamental-weighted indices. While each approach has its merits, a Capitalization-Weighted Index is widely used due to its simplicity and alignment with market dynamics.
 
 ## Conclusion
-[Custom Index Performance]([link_to_image](https://raw.githubusercontent.com/Subham2510/DS-Analytics-Project-Portfolio/main/Capitalization-Weighted%20Oil%20%26%20Gas%20Index%20Using%20Excel/Images/%25Return%20Trend%20compared%20with%20USA's%20Top%203%20Oil%20%26%20Gas%20ETFs.png))
+![%Return Trend compared with USA's Top 3 Oil   Gas ETFs](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/e7e9c2b7-d63c-45f6-b518-18101cacf362)
 The Custom Capitalization-Weighted Index for the Oil & Gas sector offers investors a tailored benchmark for tracking the performance of the top companies in this industry. This index is a valuable tool for portfolio management, investment analysis, and benchmarking against existing ETFs by accurately reflecting market capitalization and sector dynamics. Its performance comparability to leading Oil & Gas ETFs underscores its relevance and utility in guiding investment decisions in this vital sector.
