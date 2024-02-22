@@ -20,7 +20,7 @@ heatmap_data = data.pivot_table(index='Day of week', columns='Hour', values='Cri
 color_palette = "coolwarm"
 
 # Create a heatmap using Seaborn
-plt.figure(figsize=(13, 13), facecolor='#1C2737') 
+plt.figure(figsize=(13, 13), facecolor='#1C2737')
 sns.set(font_scale=1.8)  
 
 heatmap = sns.heatmap(heatmap_data, annot=False, fmt='g', cmap=color_palette, linewidths=.5)
