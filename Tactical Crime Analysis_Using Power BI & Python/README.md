@@ -7,8 +7,7 @@ This Power BI dashboard analyzes crime data in London with the goal of providing
 ![Tactical Crime analysis Page 1](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/9ecf52f2-30e9-4388-a418-665dc8f4e1a8)
 
 ### Interactive Dashboard Walkthrough
-![image](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/bfdb46a5-4ed7-4a4c-8eb2-11aea509cf9c width="10" height="10")
-See the London Crime Analysis on YouTube by clicking [here.](https://youtu.be/DHgMj7978kI)
+![icons8-youtube-48](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/52301dbd-9766-4b97-90b9-f0a5e182b362) See the London Crime Analysis on YouTube by clicking [here.](https://youtu.be/DHgMj7978kI)
 
 ### Data Origin
 
