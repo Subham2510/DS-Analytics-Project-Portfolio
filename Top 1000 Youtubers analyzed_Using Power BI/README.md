@@ -3,6 +3,8 @@
 ## Introduction
 This project delves into the realm of Top 1000 YouTubers, undertaken as part of Onyx Data's #dataDNA November 2023 Challenge. Navigating through subscriber counts, views, and trends, Power BI serves as the compass in uncovering insights akin to discovering hidden treasures within the vast world of YouTube.
 
+![Page1]([https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/e7e9c2b7-d63c-45f6-b518-18101cacf362](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/blob/main/Top%201000%20Youtubers%20analyzed_Using%20Power%20BI/Images/Top1000YT%20Page1.png?raw=true))
+
 ## Data Origin
 The data for this project originates from Onyx Data's #dataDNA November 2023 Challenge, providing comprehensive information about the top YouTubers, their subscriber counts, views, and other relevant metrics.
 
