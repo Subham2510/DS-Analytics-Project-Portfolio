@@ -6,6 +6,10 @@ This Power BI dashboard analyzes crime data in London with the goal of providing
 
 ![Tactical Crime analysis Page 1](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/9ecf52f2-30e9-4388-a418-665dc8f4e1a8)
 
+### Interactive Dashboard Walkthrough
+![image](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/bfdb46a5-4ed7-4a4c-8eb2-11aea509cf9c)
+[See the London Crime Analysis in action by clicking here.](https://youtu.be/DHgMj7978kI)
+
 ### Data Origin
 
 The data for this project was provided by FP20Analytics as part of the Data Visualization Challenge 11. It includes detailed information on various crime types, locations, dates, persons involved, and more.
@@ -15,10 +19,6 @@ The data for this project was provided by FP20Analytics as part of the Data Visu
 * **Power BI**: For data visualization, analysis, and interactive dashboard creation.
 * **Zoomchart's Drill Down Features**: To provide deeper insights into specific crime categories and locations.
 * **Python Scripting**: For creating custom heatmaps visualizing crime density across London.
-
-### Drill Downs Used
-
-[Watch the video](https://youtu.be/q26QBYtTaQE)
 
 ### Motive and Project Structure
 
