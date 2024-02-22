@@ -24,14 +24,6 @@ The primary motive behind this project is to gain insights into the top YouTuber
 
 ![Top1000YT Page2](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/9153f42c-cc26-4a07-b2f8-824b6672e409)
 
-## Key Insights
-- The top 978 YouTubers range in subscribers from 12.3M to 245M, with T-Series leading the pack, followed by YouTube Movies and MrBeast.
-- Entertainment and Music dominate with 55.62% of subscribers and 60.45% of views, while Education is the 5th most viewed category.
-- The USA leads in subscribers, while India leads in earnings. Notable outliers include S. Korea's standout earner, KIMPRO.
-- Animals earn 33.9M USD with only 42,868 videos, while News, with 43.64% of uploads, earns just 8.39M USD.
-- A scatter plot suggests aiming for 83.36M subscribers annually to join the Top 1000.
-- Analysis of top markets (USA, India, Brazil, UK, Mexico) reveals subscriber trends, views, and earnings insights.
-
 ## Usage
 1. Open the Power BI file: `Top1000_YouTubers_Analysis.pbix`
 2. Interact with the dashboard to explore the top YouTubers' subscriber counts, views, and trends.
