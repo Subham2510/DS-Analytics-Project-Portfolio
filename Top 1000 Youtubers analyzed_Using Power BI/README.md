@@ -1,7 +1,7 @@
 # Top 1000 YouTubers Analysis with Power BI 📊🎬
 
 ## Introduction
-This project delves into the realm of Top 1000 YouTubers, undertaken as part of Onyx Data's #dataDNA November 2023 Challenge. Navigating through subscriber counts, views, and trends, Power BI serves as the compass in uncovering insights akin to discovering hidden treasures within the vast world of YouTube.
+This project delves into the realm of Top 1000 YouTubers, undertaken as part of Onyx Data's #dataDNA November 2023 Challenge. Navigating through subscriber counts, views, and trends, Power BI serves as the compass for uncovering insights akin to discovering hidden treasures within the vast world of YouTube.
 
 ![Top1000YT Page1](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/7a662f2a-5116-4095-9cb6-8ddb65977f49)
 
@@ -21,6 +21,8 @@ The primary motive behind this project is to gain insights into the top YouTuber
 2. **Data Exploration**: Explore the dataset to understand key metrics and trends.
 3. **Data Visualization**: Utilize Power BI to visualize subscriber counts, views, and trends.
 4. **Insights Generation**: Extract insights from the data to understand top YouTubers' performance dynamics.
+
+![Top1000YT Page2](https://github.com/Subham2510/DS-Analytics-Project-Portfolio/assets/91491744/9153f42c-cc26-4a07-b2f8-824b6672e409)
 
 ## Key Insights
 - The top 978 YouTubers range in subscribers from 12.3M to 245M, with T-Series leading the pack, followed by YouTube Movies and MrBeast.
