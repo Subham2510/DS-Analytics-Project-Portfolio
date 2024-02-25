@@ -676,7 +676,7 @@ After performing the analysis, it's clear that we can choose either of the ```IN
 
 ```sql
 DROP TABLE IF EXISTS left_rental_join;
-CREATE TEMP TABLE left_rental_join AS
+CREATE TEMPORARY TABLE left_rental_join AS
 SELECT
   rental.customer_id,
   rental.inventory_id,
@@ -686,7 +686,7 @@ LEFT JOIN dvd_rentals.inventory
   ON rental.inventory_id = inventory.inventory_id;
 
 DROP TABLE IF EXISTS inner_rental_join;
-CREATE TEMP TABLE inner_rental_join AS
+CREATE TEMPORARY TABLE inner_rental_join AS
 SELECT
   rental.customer_id,
   rental.inventory_id,
@@ -865,7 +865,7 @@ So, now that we know we have all our foreign key values in the ```inventory``` t
 
 ```sql
 DROP TABLE IF EXISTS left_join_part_2;
-CREATE TEMP TABLE left_join_part_2 AS (
+CREATE TEMPORARY TABLE left_join_part_2 AS (
 SELECT
   inventory.inventory_id,
   inventory.film_id,
@@ -876,7 +876,7 @@ LEFT JOIN dvd_rentals.film
 );
 
 DROP TABLE IF EXISTS inner_join_part_2;
-CREATE TEMP TABLE inner_join_part_2 AS (
+CREATE TEMPORARY TABLE inner_join_part_2 AS (
 SELECT 
   inventory.inventory_id,
   inventory.film_id,
@@ -916,7 +916,7 @@ Now, that we have decided on the type of join that we are going to be using, let
 
 ```sql
 DROP TABLE IF EXISTS join_part1_and_part2;
-CREATE TEMP TABLE join_part1_and_part2 AS (
+CREATE TEMPORARY TABLE join_part1_and_part2 AS (
 SELECT
   rental.customer_id,
   inventory.film_id,
@@ -954,7 +954,7 @@ Hence, we will just go ahead with our ```INNER JOIN``` implementation for part 3
 
 ```sql
 DROP TABLE IF EXISTS join_part3_and_part4;
-CREATE TEMP TABLE join_part3_and_part4 AS (
+CREATE TEMPORARY TABLE join_part3_and_part4 AS (
 SELECT 
   film.film_id,
   film_category.category_id,
@@ -988,7 +988,7 @@ Now, let's create our full final dataset for part 1 up to part 4 using ```INNER 
 
 ```sql
 DROP TABLE IF EXISTS final_table_join_data;
-CREATE TEMP TABLE final_table_join_data AS (
+CREATE TEMPORARY TABLE final_table_join_data AS (
 SELECT 
   rental.customer_id,
   film.film_id,
@@ -1036,7 +1036,7 @@ Let's again take a look at our base table that we implemented during our last se
 
 ```sql
 DROP TABLE IF EXISTS final_table_join_data;
-CREATE TEMP TABLE final_table_join_data AS (
+CREATE TEMPORARY TABLE final_table_join_data AS (
 SELECT 
   rental.customer_id,
   film.film_id,
@@ -1200,7 +1200,7 @@ Here there is a tie because ```rental_count``` = 3 for both Animation and Sci-Fi
 ```sql
 -- First add the rental_date column from our original rental table into our final one
 DROP TABLE IF EXISTS final_table_join_data;
-CREATE TEMP TABLE final_table_join_data AS (
+CREATE TEMPORARY TABLE final_table_join_data AS (
 SELECT 
   rental.customer_id,
   film.film_id,
@@ -1316,7 +1316,7 @@ Let's first aggregate the ```rental_count``` for each customer's record for each
 
 ```sql
 DROP TABLE IF EXISTS category_rental_count;
-CREATE TEMP TABLE category_rental_count AS (
+CREATE TEMPORARY TABLE category_rental_count AS (
 SELECT 
   customer_id,
   category_name,
@@ -1362,7 +1362,7 @@ Now, in order to find the ```category_percentage``` i.e. the total proportion of
 
 ```sql
 DROP TABLE IF EXISTS customer_total_rentals;
-CREATE TEMP TABLE customer_total_rentals AS (
+CREATE TEMPORARY TABLE customer_total_rentals AS (
 SELECT
   customer_id,
   SUM(rental_count) AS total_rentals
@@ -1393,7 +1393,7 @@ Finally, we can calculate the ```AVG``` of all rentals across categories for all
 
 ```sql
 DROP TABLE IF EXISTS average_category_rental_counts;
-CREATE TEMP TABLE average_category_rental_counts AS (
+CREATE TEMPORARY TABLE average_category_rental_counts AS (
 SELECT
   category_name,
   ROUND(
@@ -1544,7 +1544,7 @@ Now, these percentile values look reasonable. Lets store these values in another
 
 ```sql
 DROP TABLE IF EXISTS customer_category_percentiles;
-CREATE TEMP TABLE customer_category_percentiles AS (
+CREATE TEMPORARY TABLE customer_category_percentiles AS (
 SELECT 
   customer_id,
   category_name,
@@ -1579,7 +1579,7 @@ So, now that we have created multiple temporary tables for different aggregation
 
 ```sql
 DROP TABLE IF EXISTS customer_category_join_table;
-CREATE TEMP TABLE customer_category_join_table AS (
+CREATE TEMPORARY TABLE customer_category_join_table AS (
 SELECT
   t1.customer_id,
   t1.category_name,
@@ -1631,7 +1631,7 @@ Two fields remaining are ```avg_comparison``` which the comparison between custo
 
 ```sql
 DROP TABLE IF EXISTS customer_category_join_table;
-CREATE TEMP TABLE customer_category_join_table AS (
+CREATE TEMPORARY TABLE customer_category_join_table AS (
 SELECT
   t1.customer_id,
   t1.category_name,
@@ -1678,7 +1678,7 @@ Here, we will use the ```ROW_NUMBER``` window function which will give us a row 
 
 ```sql
 DROP TABLE IF EXISTS top_categories_information;
-CREATE TEMP TABLE top_categories_information AS (
+CREATE TEMPORARY TABLE top_categories_information AS (
 WITH ordered_customer_join_table AS (
   SELECT 
     customer_id,
@@ -1735,7 +1735,7 @@ We first create a ```complete_joint_dataset``` implementing all the required joi
 
 ```sql
 DROP TABLE IF EXISTS complete_joint_dataset;
-CREATE TEMP TABLE complete_joint_dataset AS (
+CREATE TEMPORARY TABLE complete_joint_dataset AS (
 SELECT
   rental.customer_id,
   inventory.film_id,
@@ -1779,7 +1779,7 @@ Now, that we have the total dataset table containing records for each customer's
 
 ```sql
 DROP TABLE IF EXISTS category_counts;
-CREATE TEMP TABLE category_counts AS (
+CREATE TEMPORARY TABLE category_counts AS (
 SELECT
   customer_id,
   category_name,
@@ -1829,7 +1829,7 @@ Since we later need to calculate the percentage of each category it counts to th
 
 ```sql
 DROP TABLE IF EXISTS total_counts;
-CREATE TEMP TABLE total_counts AS(
+CREATE TEMPORARY TABLE total_counts AS(
 SELECT
   customer_id,
   SUM(rental_count) AS total_count
@@ -1864,7 +1864,7 @@ Now, let's filter out the top 2 categories for each customer based on their rent
 
 ```sql
 DROP TABLE IF EXISTS top_categories;
-CREATE TEMP TABLE top_categories AS (
+CREATE TEMPORARY TABLE top_categories AS (
 WITH ranked_cte AS (
   SELECT
     customer_id,
@@ -1911,7 +1911,7 @@ Here, we calculate the average rental count for each category. This will help us
 
 ```sql
 DROP TABLE IF EXISTS average_category_count;
-CREATE TEMP TABLE average_category_count AS (
+CREATE TEMPORARY TABLE average_category_count AS (
 SELECT
   category_name,
   FLOOR(AVG(rental_count)) AS category_count
@@ -1956,7 +1956,7 @@ Here, we compare each customer's top category ```rental_count``` to all the othe
 
 ```sql
 DROP TABLE IF EXISTS top_category_percentile;
-CREATE TEMP TABLE top_category_percentile AS (
+CREATE TEMPORARY TABLE top_category_percentile AS (
 WITH calculated_cte AS (
 SELECT
   top_categories.customer_id,
@@ -2013,7 +2013,7 @@ For the top category, we require ```average_comparison``` and ```percentile``` f
 
 ```sql
 DROP TABLE IF EXISTS first_category_insights;
-CREATE TEMP TABLE first_category_insights AS (
+CREATE TEMPORARY TABLE first_category_insights AS (
 SELECT
   t1.customer_id,
   t1.category_name,
@@ -2051,7 +2051,7 @@ And for the second category, we need to calculate its ```total_percentage``` tha
 
 ```sql
 DROP TABLE IF EXISTS second_category_insights;
-CREATE TEMP TABLE second_category_insights AS (
+CREATE TEMPORARY TABLE second_category_insights AS (
 SELECT
   t1.customer_id,
   t1.category_name,
@@ -2092,7 +2092,7 @@ First, we will calculate the total ```rental_count``` which is how many times a 
 
 ```sql
 DROP TABLE IF EXISTS film_counts;
-CREATE TEMP TABLE film_counts AS (
+CREATE TEMPORARY TABLE film_counts AS (
 SELECT DISTINCT
   film_id,
   title,
@@ -2129,7 +2129,7 @@ We now make a list of all the films every customer has watched along with the ``
 
 ```sql
 DROP TABLE IF EXISTS category_film_exclusion;
-CREATE TEMP TABLE category_film_exclusion AS (
+CREATE TEMPORARY TABLE category_film_exclusion AS (
 SELECT DISTINCT
   customer_id,
   film_id,
@@ -2163,7 +2163,7 @@ Finally, we find out the 3 films that we can recommend to each customer based on
 
 ```sql
 DROP TABLE IF EXISTS category_recommendations;
-CREATE TEMP TABLE category_recommendations AS (
+CREATE TEMPORARY TABLE category_recommendations AS (
 WITH ranked_films_cte AS (
 SELECT
   top_categories.customer_id,
@@ -2226,7 +2226,7 @@ Here, we create a similar base table as ```complete_joint_dataset``` but this ti
 
 ```sql
 DROP TABLE IF EXISTS actor_joint_dataset;
-CREATE TEMP TABLE actor_joint_dataset AS (
+CREATE TEMPORARY TABLE actor_joint_dataset AS (
 SELECT 
   rental.customer_id,
   rental.rental_id,
@@ -2290,7 +2290,7 @@ Now, based on the ```actor_joint_dataset```, we calculate the count of the total
 
 ```sql
 DROP TABLE IF EXISTS top_actor_counts;
-CREATE TEMP TABLE top_actor_counts AS (
+CREATE TEMPORARY TABLE top_actor_counts AS (
 WITH actor_counts AS (
 SELECT 
   customer_id,
@@ -2358,7 +2358,7 @@ We first calculate the actor-film rental counts which will help us in recommendi
 
 ```sql
 DROP TABLE IF EXISTS actor_film_counts;
-CREATE TEMP TABLE actor_film_counts AS (
+CREATE TEMPORARY TABLE actor_film_counts AS (
 WITH film_counts AS (
 SELECT
   film_id,
@@ -2403,7 +2403,7 @@ Now, we will create a table of films that should be excluded while recommending 
 
 ```sql
 DROP TABLE IF EXISTS actor_film_exclusions;
-CREATE TEMP TABLE actor_film_exclusions AS (
+CREATE TEMPORARY TABLE actor_film_exclusions AS (
 SELECT DISTINCT
   customer_id,
   film_id
@@ -2442,7 +2442,7 @@ Finally, we create a table containing all the film recommendations for the custo
 
 ```sql
 DROP TABLE IF EXISTS actor_recommendations;
-CREATE TEMP TABLE actor_recommendations AS (
+CREATE TEMPORARY TABLE actor_recommendations AS (
 WITH ranked_actor_films_cte AS (
 SELECT
   top_actor_counts.customer_id,
@@ -2627,7 +2627,7 @@ Finally, let's create the output table that the marketing business table can use
 
 ```sql
 DROP TABLE IF EXISTS final_data_asset;
-CREATE TEMP TABLE final_data_asset AS (
+CREATE TEMPORARY TABLE final_data_asset AS (
 WITH first_category AS (
 SELECT 
   customer_id,
