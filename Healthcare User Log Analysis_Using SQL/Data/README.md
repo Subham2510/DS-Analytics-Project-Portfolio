@@ -1,3 +1,21 @@
+# Healthcare User Log Analysis
+Using MySQL | By Subham Pramanick
+
+## Introduction:
+
+A healthcare company is launching a new weight management program using a mobile application. The app tracks users' weight and other health measures to help them monitor their progress and achieve their weight loss goals. 
+
+## Business Problem:
+
+The company needs to gain insights from the initial user logs data collected through the app to:
+
+1. **Understand user engagement:** Analyze the number of users and the frequency of weight entries to assess initial user engagement with the app.
+2. **Identify data quality issues:** Investigate the presence of missing weight entries, potential duplicate records, and unrealistic weight values to ensure data quality for reliable analysis.
+3. **Explore weight distribution:** Analyze the distribution of user weights within the app to understand the user base demographics and potential target groups for the program.
+4. **Calculate initial weight statistics:** Compute descriptive statistics like mean, median, and standard deviation of user weight to establish a baseline for measuring program effectiveness over time.
+
+By analyzing the user logs data using techniques demonstrated in this project, the healthcare company can gain valuable insights to address these business needs and optimize their weight management program for better user engagement and successful weight loss outcomes.
+
 # 1. Exploratory Data Analysis
 
 ## 1.1 A look at the dataset
@@ -62,8 +80,8 @@ SELECT
   measure,
   COUNT(*) AS frequency,
   ROUND(
-  100* COUNT(*)::NUMERIC/SUM(COUNT(*)) OVER(),
-  2) AS percentage
+    100 * COUNT(*) / (SELECT COUNT(*) FROM health.user_logs), 2
+  ) AS percentage
 FROM health.user_logs
 GROUP BY measure
 ORDER BY frequency DESC;
@@ -83,8 +101,8 @@ SELECT
   id,
   COUNT(*) AS frequency,
   ROUND(
-  100* COUNT(*)::NUMERIC/SUM(COUNT(*)) OVER(),
-  2) AS percentage
+    100 * COUNT(*) / (SELECT COUNT(*) FROM health.user_logs), 2
+  ) AS percentage
 FROM health.user_logs
 GROUP BY id
 ORDER BY frequency DESC
@@ -214,8 +232,8 @@ SELECT
   measure,
   COUNT(*) AS frequency,
   ROUND(
-  100* COUNT(*)::NUMERIC/SUM(COUNT(*)) OVER(),
-  2) AS percentage
+    100 * COUNT(*) / (SELECT COUNT(*) FROM health.user_logs), 2
+  ) AS percentage
 FROM health.user_logs
 GROUP BY measure
 ORDER BY frequency DESC;
@@ -387,7 +405,7 @@ Now, let's create the temporary table.
 
 ```sql
 DROP TABLE IF EXISTS deduplicated_user_logs;
-CREATE TEMP TABLE deduplicated_user_logs AS
+CREATE TEMPORARY TABLE deduplicated_user_logs AS
 SELECT DISTINCT *
 FROM health.user_logs;
 ```
